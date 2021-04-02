@@ -1,4 +1,5 @@
 import 'package:ecommerc_eapp/pages/cart.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Cart_Products extends StatefulWidget {
@@ -80,6 +81,7 @@ class Single_cart_product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+
       child: ListTile(
 
         //================== LEADING SECTION   =========================================
@@ -145,7 +147,7 @@ class Single_cart_product extends StatelessWidget {
 
         trailing: Column(
           children: [
-            IconButton(icon: Icon(Icons.arrow_drop_up), onPressed: (){}),
+            IconButton(icon: Icon(Icons.arrow_drop_up,), onPressed: (){}),
             Text("$cart_prod_qty"),
             IconButton(icon: Icon(Icons.arrow_drop_down), onPressed: (){}),
           ],

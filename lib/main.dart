@@ -167,15 +167,19 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      body: ListView(
+      body: Column(
         children: [
           //image carousel
-          image_carousel,
+          //image_carousel,
           //endof imagecarousel
 
           //padding widget
-          Padding(padding: const EdgeInsets.all(8.0),
-          child: Text("Categories"),
+          Padding(padding: const EdgeInsets.all(4.0),
+          child: Container(
+            alignment: Alignment.centerLeft,
+              child: Text("Categories",style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+          ),
           ),
           //endof padding widget
 
@@ -184,18 +188,15 @@ class _HomePageState extends State<HomePage> {
           //endof horizontal listview
 
           //padding widget
-          Padding(padding: const EdgeInsets.all(22.0),
-            child: Text("Recent Products"),
+          Padding(padding: const EdgeInsets.all(8.0),
+            child: Container(
+              alignment: Alignment.centerLeft,
+                child: Text("Recent Products",style: TextStyle(fontWeight: FontWeight.bold),),
+            ),
           ),
 
           //Grid view
-          Container(
-            height: 320.0,
-            child: Products(),
-          ),
-
-
-
+          Flexible(child: Products()),
         ],
       ),
     );
